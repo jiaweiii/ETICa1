@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<div class="col-md-8 offset-md-2">
+	{% for selfintro in intros %}
+	<h2>{{ selfintro.title }}</a></h2>
+	<hr>
+	<img class="card-img-top" src="{{ selfintro.image.url }}"> 
+	<p>{{ selfintro.description}}</p>
+	 {% endfor %}
+</div>
+<div class="col-md-8 offset-md-2">
+<h2>Resume</h2>
+<hr>
+<h3>Experiences</h3>
+<li>IT Intern at Moet Hennessy Singapore</li>
+<li>IT Support at BoardRoom Limited</li>
+<hr>
+<h3>Education</h3>
+<hr>
+<li>Ngee Ann Poly</li>
+<li>ITE College Central</li>
+<hr>
+<h3>Skills</h3>
+<hr>
+<li>Programming</li>
+<li>Networking</li>
+<hr>
+<h3>Contact Me</h3>
+<hr>
+<a href="https://www.linkedin.com/in/jiawei-chua-a16973141/" target="_blank">Click here to connect with me on linkedin!</a>
+</div>
+{% endblock %}

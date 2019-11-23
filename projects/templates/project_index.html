@@ -1,16 +1,18 @@
 {% extends "base.html" %}
 {% load static %}
 {% block page_content %}
+<head>
+<title>Home</title>
+</head>
 <div class="col-md-8 offset-md-2">
-	{% for selfintro in intros %}
-	<h2>{{ selfintro.title }}</a></h2>
+	<h2 class='selfintro'>Self Introduction</a></h2>
 	<hr>
-	<img class="card-img-top" src="{{ selfintro.image.url }}"> 
-	<p>{{ selfintro.description}}</p>
-	 {% endfor %}
+	<img class="card-img-top" src="{% static 'img/cat.jpg' %}" alt="My image"/>
+	<p>Hi I'm Jiawei a year 3 student in Ngee Ann Poly school of ICT. 
+I'll be graduating in 2020 March.</p>
 </div>
 <div class="col-md-8 offset-md-2">
-<h2>Resume</h2>
+<h2 class='resume'>Resume</h2>
 <hr>
 <h3>Experiences</h3>
 <li>IT Intern at Moet Hennessy Singapore</li>
@@ -26,8 +28,5 @@
 <li>Programming</li>
 <li>Networking</li>
 <hr>
-<h3>Contact Me</h3>
-<hr>
-<a href="https://www.linkedin.com/in/jiawei-chua-a16973141/" target="_blank">Click here to connect with me on linkedin!</a>
 </div>
 {% endblock %}

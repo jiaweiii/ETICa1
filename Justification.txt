@@ -1,0 +1,3 @@
+One test case - Testing of common password was left out because common password is hard to justify and it's different for everyone.
+
+The coverage report is not 100% because, if the condition are met, the code inside will not be executed and this happened for my try, catch statement in two of my tests

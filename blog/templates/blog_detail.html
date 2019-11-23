@@ -3,7 +3,7 @@
 <div class="col-md-8 offset-md-2">
     <h1>{{ post.title }}</h1>
     <small>
-	<img class="card-img-top" src="{{ post.image.url }}"> 
+	<!--<img class="card-img-top" src="{{ post.image.url }}"> -->
         {{ post.created_on.date }} |&nbsp;
         Categories:&nbsp;
         {% for category in post.categories.all %}
@@ -35,7 +35,7 @@
 	{% endif %}
     <h3>Comments:</h3>
     {% for comment in comments %}
-    <p>
+    <p name='usercomment'>
         On {{comment.created_on.date }}&nbsp;
         <b>{{ comment.author }}</b> wrote:
     </p>
